@@ -54,3 +54,15 @@ spec:
     targetPort: 3306
   selector:
     app: mysql-testing
+---
+apiVersion: v1
+kind: Service
+spec:
+  selector:
+    app: php-test
+  type: ClusterIP
+  ports:
+    - name: php-service
+      port: 80
+      targetPort: 8000
+      protocol: TCP
