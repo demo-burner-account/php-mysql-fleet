@@ -1,18 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-deployment
-  labels:
-    app: mysql-testing
+  name: mysql-demo-k8s
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: mysql-testing
+      app: mysql-test
+  replicas: 2
   template:
     metadata:
       labels:
-        app: mysql-testing
+        app: mysql-test
     spec:
       containers:
       - name: mysql-test
