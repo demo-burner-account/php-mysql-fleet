@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql-testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-testing
+  template:
+    metadata:
+      labels:
+        app: mysql-testing
+    spec:
+      containers:
+      - name: mysql-test
+        image: demoburneraccount/ci-testing:mysql
+        ports:
+        - containerPort: 3306
