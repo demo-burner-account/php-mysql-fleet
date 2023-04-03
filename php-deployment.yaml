@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-deployment
+  labels:
+    app: php-mysql-testing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: php-mysql-testing
+  template:
+    metadata:
+      labels:
+        app: php-mysql-testing
+    spec:
+      containers:
+      - name: php-test
+        image: demoburneraccount/ci-testing:php
+        ports:
+        - containerPort: 8000
