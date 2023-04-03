@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: mysql-test
+        imagePullPolicy: Always
         image: demoburneraccount/ci-testing:mysql
         ports:
         - containerPort: 3306
