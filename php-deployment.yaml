@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-demo-updated
+  name: php-demo
 spec:
   selector:
     matchLabels:
@@ -15,6 +15,6 @@ spec:
       containers:
       - name: php-test
         imagePullPolicy: Always
-        image: demoburneraccount/ci-testing:php
+        image: demoburneraccount/ci-testing:php1
         ports:
         - containerPort: 8000
