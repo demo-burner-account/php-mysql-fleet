@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-demo-k8s
+  name: php-demo-updated
 spec:
   selector:
     matchLabels:
