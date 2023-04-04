@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-demo-k8s
+  name: mysql-demo-updated
 spec:
   selector:
     matchLabels:
